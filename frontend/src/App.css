@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  background-image: url(media/simple4.jpg);
+}
+
+p {
+  font-size: 20px;
+  font-family: Papyrus;
+  font-weight: bold;
+}
+
+hr {
+  border: 4px solid;
+}

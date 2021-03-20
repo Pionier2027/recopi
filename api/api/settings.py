@@ -25,8 +25,22 @@ SECRET_KEY = 'h9s33#kz!cjf#h=bepvwdd10f$7w9)=slne4nndd!isr&i=2d-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+try:
+    from .local_settings import *
+except ImportError:
+    pass
 
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
+else:
+    import environ
+    env = environ.Env()
+    env.read_env(os.path.join(BASE_DIR, '.env'))
+
+    SECRET_KEY = env('SECRET_KEY')
+    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+    STATIC_ROOT = '/usr/share/nginx/html/static' 
+    MEDIA_ROOT = '/usr/share/nginx/html/media'
 
 # Application definition
 
@@ -37,6 +51,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'images',
+    # 'rest_framework',
+    # 'corsheaders',
+]
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8000"
 ]
 
 MIDDLEWARE = [
@@ -47,6 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'api.urls'
@@ -121,3 +143,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media_root')
+MEDIA_URL = '/media/'
