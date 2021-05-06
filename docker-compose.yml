@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   db:
@@ -24,6 +24,7 @@ services:
       - node-modules:/app/frontend/node_modules
     ports:
       - "3000:3000"
+    stdin_open: true
 
 volumes:
   node-modules:
