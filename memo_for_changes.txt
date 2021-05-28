@@ -1,0 +1,7 @@
+pip --->  pip3
+python ---> python3
+
+# tensorflow==2.0.0a0
+---> tensorflow==2.3.1
+
+python 3.4 ---> python 3.8.3

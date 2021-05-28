@@ -9,7 +9,7 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
   django:
     build: ./api
-    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
     volumes:
       - ./api:/app/api
     ports:
