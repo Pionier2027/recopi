@@ -52,12 +52,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'images',
-    # 'rest_framework',
-    # 'corsheaders',
+    'rest_framework',
+    'corsheaders',
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:8000"
+    "http://localhost:3000"
 ]
 
 MIDDLEWARE = [
