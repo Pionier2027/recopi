@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import './Classifier.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Alert, Button, Image, Spinner} from 'react-bootstrap';
 import axios from 'axios';
 import Webcam from 'react-webcam';
