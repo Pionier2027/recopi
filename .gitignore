@@ -243,7 +243,10 @@ nix.kdev4
 compile_commands.json
 .cquery_cached_index/
 .ccls-cache/
-
+ß
 #ignore VS Code specific files
 .vscode/
 ##################################
+
+*.h5
+*/model/*
