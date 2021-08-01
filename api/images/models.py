@@ -33,7 +33,7 @@ class Image(models.Model):
         img_array = image.img_to_array(img)
         to_pred = np.expand_dims(img_array, axis=0) #(1, 225, 225, 3)
         try:
-            file_model = os.path.join(os.path.dirname(settings.BASE_DIR), 'model/vgg16_sample_22.h5')
+            file_model = os.path.join(settings.BASE_DIR, 'model/vgg16_sample_22.h5')
             graph = tfv1.get_default_graph()
             
             with graph.as_default():
