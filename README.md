@@ -7,12 +7,12 @@ Web Application for automating the process of storing ingredients and recommendi
 - Daeho Bang: Data Collection, Data Preprocessing
 
 ## Description
-![image1](https://github.com/Pionier2027/recopi/blob/master/readme/smartrg1.jpg)
+![image1](https://github.com/Pionier2027/recopi/blob/main/readme/smartrg1.jpg?raw=true)
 
-![image2](https://github.com/Pionier2027/recopi/blob/master/readme/smartrg2.jpg)
+![image2](https://github.com/Pionier2027/recopi/blob/main/readme/smartrg2.jpg?raw=true)
 
 ## Demo Video
-[![demo_video](https://github.com/Pionier2027/recopi/blob/master/readme/smartrg_demo_pic.PNG?raw=true)](https://sunmoonackr-my.sharepoint.com/:v:/g/personal/seiyau77_sunmoon_ac_kr/ETZ_mhZaOkREvqAyERtMMdkBBsInM9R2cZA3jXTO9abOZw?e=BBeuPH)
+[![demo_video](https://github.com/Pionier2027/recopi/blob/main/readme/smartrg_demo_pic.png?raw=true)](https://sunmoonackr-my.sharepoint.com/:v:/g/personal/seiyau77_sunmoon_ac_kr/ETZ_mhZaOkREvqAyERtMMdkBBsInM9R2cZA3jXTO9abOZw?e=BBeuPH)
 
 ## Future Plan
 - Introduce a raspberry pi camera and an audio input to recognize actual ingredients stored in a fridge.
@@ -29,8 +29,7 @@ Please first install [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install
 1. download [a weight file of VGG16](https://sunmoonackr-my.sharepoint.com/:u:/g/personal/seiyau77_sunmoon_ac_kr/Ea4K_0F4JR9OqOMhpIh-h7MBW2RtoMGYYwgQdnwkOYmong?e=yz5jn5)
 1. Save the files above into `recopi/api/model`(create this directory if it doesn't exist)
 
-## Running
-
+## Initial Running
 1. `docker-compose up --build -d`
 1. `bash django_setup.sh`
 1. There should now be three servers running:
@@ -41,8 +40,9 @@ Please first install [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install
 ## Checking working containers
   - `docker-compose ps`
 
-## Closing
+## Closing(must include -v)
   - `docker-compose down -v`
 
-## Rerunning
+## Rerunning(without build/rerun django setup file)
   - `docker-compose up -d`
+  - `bash django_setup.sh`

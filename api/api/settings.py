@@ -103,6 +103,17 @@ DATABASES = {
         'HOST': 'db',
         'PORT': 5432,
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql', 
+    #     'NAME': 'mysql',
+    #     'USER': 'mysql',
+    #     'HOST': 'db',   # Or an IP Address that your DB is hosted on
+    #     'PORT': '3306',
+    # }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': 'mydatabase',
+    # }
 }
 
 

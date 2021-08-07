@@ -34,9 +34,9 @@ class Menu extends Component {
             console.log(ingrs.slice(ingrs.length-3, ingrs.length))
             if (ingrs.length >=3 ) {
                 this.fetchRecipes(ingrs.slice(ingrs.length-3, ingrs.length))
-            } else if (ingrs.length == 2) {
+            } else if (ingrs.length === 2) {
                 this.fetchRecipes(ingrs.slice(ingrs.length-2, ingrs.length))
-            } else if (ingrs.length == 1) {
+            } else if (ingrs.length === 1) {
                 this.fetchRecipes(ingrs.slice(ingrs.length-1, ingrs.length))
             }
         })

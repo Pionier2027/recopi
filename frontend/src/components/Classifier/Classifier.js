@@ -50,6 +50,7 @@ class Classifier extends Component {
          console.log(this.state.files[0].name)
          formData.append('picture', this.state.files[0], this.state.files[0].name)
          console.log(formData.getAll('picture'))
+         console.log(formData)
          axios.post('http://127.0.0.1:8000/api/images/', formData, {
              headers: {
                 'accept': 'application/json',

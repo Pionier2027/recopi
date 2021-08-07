@@ -27,7 +27,7 @@ class Image(models.Model):
         'chicken','eggs','grape','green_onions','milk','miso','onion','orange',
         'pineapple','peach','potatoes','salt','shrimp','strawberry','tofu','yogurt']
         img_pil = Img.open(self.picture)
-        img_path = os.path.join(os.path.dirname(settings.BASE_DIR), 'media_root/' + str(self.picture)) 
+        img_path = os.path.join(settings.BASE_DIR, 'media_root/' + str(self.picture)) 
         img_pil.save(img_path, "JPEG")
         img = image.load_img(img_path, target_size=(224,224))
         img_array = image.img_to_array(img)

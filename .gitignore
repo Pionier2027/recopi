@@ -250,3 +250,7 @@ compile_commands.json
 
 *.h5
 */model/*
+mydatabase
+data/
+db/
+*_*_*.jpg
