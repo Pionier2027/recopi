@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Navigation />
       <div className='App'>
-        <Switch>
+        <Switch> 
           {/* 食材分類のメインページ */}
           <Route exact path='/' component={Classifier} />
           {/* 冷蔵庫に保管された食材リスト */}
@@ -19,11 +19,10 @@ function App() {
           {/* 献立オススメのページ */}
           <Route exact path='/menu' component={Menu} />
           {/* それ以外のURLが指定された場合メインページに飛ぶよう指定 */}
-          <Route exact path='*' component={Classifier} />
+          <Route exact path='*' component={Classifier} /> 
         </Switch>
       </div>
     </BrowserRouter>
   );
 }
-
 export default App;

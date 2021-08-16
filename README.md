@@ -1,4 +1,4 @@
-# FridgeClassifier
+# recopi
 Web Application for automating the process of storing ingredients and recommending recipes
 
 ## Roles
@@ -26,7 +26,7 @@ Please first install [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install
 
 
 ## Download weight files
-1. download [a weight file of VGG16](https://sunmoonackr-my.sharepoint.com/:u:/g/personal/seiyau77_sunmoon_ac_kr/Ea4K_0F4JR9OqOMhpIh-h7MBW2RtoMGYYwgQdnwkOYmong?e=yz5jn5)
+1. download [a weight file of VGG16](https://sunmoonackr-my.sharepoint.com/:u:/g/personal/seiyau77_sunmoon_ac_kr/EbsUNKEqfjxOoglvmVzr4zkBMRQ4cuhYtCpnwOtZWcpJYA?e=gVedY0)
 1. Save the files above into `recopi/api/model`(create this directory if it doesn't exist)
 
 ## Initial Running
