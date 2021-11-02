@@ -1,6 +1,9 @@
 # recopi
 Web Application for automating the process of storing ingredients and recommending recipes
 
+## Check Document below first(In Japanese)
+[recopi_document(in Japanese)](https://sunmoonackr-my.sharepoint.com/:w:/g/personal/seiyau77_sunmoon_ac_kr/EZ2F7x-55cFFvMbL-gBhcYkBftBZOspK7cnXuZyzJP81oA?e=dqTqVi)
+
 ## Roles
 - Seiya Umemoto: Project Manager, Front/Back End
 - Takamichi Nomura: AI Tuning

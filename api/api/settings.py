@@ -57,8 +57,10 @@ INSTALLED_APPS = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
+    "http://127.0.0.1:3000",
     "http://localhost:3000"
 ]
+CORS_ALLOW_CREDENTIALS = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -96,13 +98,14 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'postgres',
-    #     'USER': 'postgres',
-    #     'HOST': 'db',
-    #     'PORT': 5432,
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql', 
     #     'NAME': 'mysql',
@@ -110,10 +113,10 @@ DATABASES = {
     #     'HOST': 'db',   # Or an IP Address that your DB is hosted on
     #     'PORT': '3306',
     # }
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': 'mydatabase',
+    # }
 }
 
 
