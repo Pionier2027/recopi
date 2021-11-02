@@ -3,13 +3,25 @@ version: "3"
 services:
   db:
     image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+    restart: unless-stopped
+    volumes:
+      - db-data:/var/lib/postgresql
     ports:
       - "5432:5432"
-    environment:
-      - POSTGRES_HOST_AUTH_METHOD=trust
   django:
-    build: ./api
-    command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+    build:
+      context: ./api/
+      dockerfile: ./Dockerfile   
+    command: ./django_setup.sh
+    environment:
+      POSTGRES_NAME: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST: db
     volumes:
       - ./api:/app/api
     ports:
@@ -17,7 +29,9 @@ services:
     depends_on:
       - db
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend/
+      dockerfile: ./Dockerfile
     command: ["npm", "start"]
     volumes:
       - ./frontend:/app/frontend
@@ -25,6 +39,9 @@ services:
     ports:
       - "3000:3000"
     stdin_open: true
+    depends_on:
+      - django
 
 volumes:
   node-modules:
+  db-data:
