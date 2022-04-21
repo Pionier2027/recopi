@@ -4,9 +4,12 @@
 # https://docs.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from itemloaders.processors import TakeFirst
 
 
 class SpiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    crawled_url = scrapy.Field(output_processor=TakeFirst())
+    title = scrapy.Field(output_processor=TakeFirst())
+    serves = scrapy.Field(output_processor=TakeFirst())
+    ingredients = scrapy.Field(output_processor=TakeFirst())
+    image_path = scrapy.Field(output_processor=TakeFirst())
