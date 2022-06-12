@@ -249,7 +249,7 @@ compile_commands.json
 ##################################
 
 *.h5
-*/model/*
+*/model/*.h5
 mydatabase
 data/
 db/
