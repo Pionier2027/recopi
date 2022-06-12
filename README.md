@@ -34,18 +34,16 @@ Please first install [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install
 
 ## Initial Running
 1. `docker-compose up --build -d`
-1. `bash django_setup.sh`
 1. There should now be three servers running:
-  - [http://127.0.0.1:8000](http://127.0.0.1:8000) is the Django app
-  - [http://127.0.0.1:3000](http://127.0.0.1:3000) is the React app
-  - [http://127.0.0.1:5432](http://127.0.0.1:5432) is the PostgreSQL Database
+- [http://127.0.0.1:8000](http://127.0.0.1:8000) is the Django app
+- [http://127.0.0.1:3000](http://127.0.0.1:3000) is the React app
+- [http://127.0.0.1:5432](http://127.0.0.1:5432) is the PostgreSQL Database
 
 ## Checking working containers
-  - `docker-compose ps`
+- `docker-compose ps`
 
 ## Closing(must include -v)
-  - `docker-compose down -v`
+- `docker-compose down -v`
 
-## Rerunning(without build/rerun django setup file)
-  - `docker-compose up -d`
-  - `bash django_setup.sh`
+## Rerunning(without build)
+- `docker-compose up -d`
