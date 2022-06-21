@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rakuten-data-crawler"
+version = "0.1.0"
+description = "crawl news from one-career"
+authors = ["QuickWork, inc. <info@quickwork.jp>"]
+
+[tool.poetry.dependencies]
+python = "^3.9.1"
+Scrapy = "^2.6.1"
+SQLAlchemy = "^1.4.32"
+beautifulsoup4 = "^4.11.1"
+crawler-utils = {git = "https://github.com/QuickWorkInc/crawler-utils.git", rev = "main"}
+psycopg2 = "^2.9.3"
+mojimoji = "^0.0.12"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.1.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

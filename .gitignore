@@ -254,3 +254,4 @@ mydatabase
 data/
 db/
 *_*_*.jpg
+test.py
